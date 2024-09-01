@@ -1,0 +1,128 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  user-select: none;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1em 0;
+  width: 100%;
+  position: relative;
+}
+
+main {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the main content */
+  position: relative;
+}
+
+/* Position Stats Section */
+#statsSection {
+  position: fixed; /* Fixed positioning relative to the viewport */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays on top */
+  text-align: left; /* Align text to the left */
+  width: 200px; /* Set a fixed width */
+}
+
+/* Adjust the Available Upgrades Section */
+#upgradeSection {
+  margin-left: 220px; /* Ensure it doesn't overlap with the stats section */
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#upgradesContainer {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.upgrade-card {
+  display: table-row;
+  background-color: #eee;
+  border-radius: 0;
+  padding: 0;
+}
+
+.upgrade-card h3,
+.upgrade-card p,
+.upgrade-card button {
+  display: table-cell;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 0;
+}
+
+.upgrade-card h3 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* Enable/Disable button styles */
+.upgrade-card button {
+  background-color: grey; /* Disabled state */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: not-allowed;
+  transition: background-color 0.3s ease;
+}
+
+.upgrade-card button.enabled {
+  background-color: #4caf50; /* Enabled state */
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Coffee Mug Styles */
+.coffee-mug {
+  position: fixed; /* Fixed positioning relative to the viewport */
+  left: 0; /* Positioned on the left edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Correct vertical centering */
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #statsSection {
+    position: relative; /* Make the stats section part of the flow on small screens */
+    width: 100%;
+    margin-bottom: 20px; /* Space below the stats section */
+  }
+
+  #upgradeSection {
+    margin-left: 0; /* Remove the left margin */
+    margin-top: 20px; /* Space below the stats section */
+  }
+}

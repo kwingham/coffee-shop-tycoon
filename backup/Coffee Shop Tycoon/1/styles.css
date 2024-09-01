@@ -1,0 +1,114 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 15%; /* Top position relative to the viewport height */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 2; /* Ensure it's on top */
+}
+
+.tycoon {
+  color: darkgreen;
+  display: inline-block;
+  transform: rotate(-30deg);
+  transform-origin: top left;
+  margin-left: -8px;
+  position: relative;
+  top: 15px;
+}
+
+body {
+  background-color: rgb(44, 195, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+body {
+  user-select: none; /* Disable text selection in modern browsers */
+}
+
+body::before {
+  content: "";
+  background: url("assets/warm-yellow-toned-backgroound.webp") no-repeat center
+    center;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+}
+
+/* Position content in the bottom-left of the yellow background */
+.content {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10%; /* Position relative to the bottom of the yellow area */
+  left: 29%; /* Position relative to the left of the yellow area */
+  left: 32%; /* Position relative to the left of the yellow area */
+  transform: translate(0, 0); /* No centering translation */
+}
+
+/* Coffee mug placed at the bottom center */
+.coffee-mug {
+  position: absolute;
+  bottom: 10%; /* Adjust this value if needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 12vw;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transform-origin: center center; /* Ensure rotation happens around the center */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .coffee-mug {
+    width: 18vw; /* Scale mug for smaller screens */
+    bottom: 15%;
+  }
+
+  .content {
+    bottom: 10%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-mug {
+    width: 25vw;
+    bottom: 20%;
+  }
+
+  .content {
+    bottom: 10%;
+    left: 5%;
+  }
+
+  header {
+    top: 3%;
+  }
+
+  .tycoon {
+    font-size: 0.8em;
+  }
+}

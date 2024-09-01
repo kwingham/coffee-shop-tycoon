@@ -3,22 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop Upgrades</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Timers Workshop</title>
   </head>
   <body>
-    <div class="container">
-      <!--Part 1: setTimeout-->
-      <h2>Show Message with setTimeout</h2>
-      <button id="showMessageBtn">Show Message</button>
-      <div id="message">Action confirmed❣️🏆🦾</div>
+    <header>
+      <h1>Coffee Shop Upgrades</h1>
+    </header>
 
-      <!--Part 2: setInterval-->
-      <h2>Timer with setInterval</h2>
-      <button id="toggleTimerBtn">Start Timer</button>
-      <div id="timerDisplay">0</div>
-    </div>
+    <main>
+      <section id="upgradeSection">
+        <h2>Available Upgrades</h2>
+        <div id="upgradesContainer">
+          <p>Loading upgrades...</p>
+        </div>
+      </section>
 
-    <script src="./app.js" defer></script>
+      <section id="statsSection">
+        <h2>Your Stats</h2>
+        <p id="coffeeCount">Cups of Coffee Sold: 0</p>
+        <p id="coffeePerSecond">
+          Coffees being sold per second by colleagues: 0
+        </p>
+      </section>
+
+      <!-- Coffee Mug Image -->
+      <img
+        src="assets/coffee-mug.webp"
+        alt="Coffee Mug"
+        class="coffee-mug"
+        id="coffeeMug"
+      />
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Coffee Shop Tycoon</p>
+    </footer>
+
+    <script src="fetch-api.js" defer></script>
+    <script src="app.js" defer></script>
   </body>
 </html>
