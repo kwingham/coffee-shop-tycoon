@@ -44,3 +44,5 @@ As a developer, I want the README to provide a clear project description, deploy
 
 As a user, I want a settings menu to adjust options like coffee shop ambiance sound effects and display preferences to customize my gaming experience.
 ❌ Not Met: There is no settings menu implemented for adjusting sound effects or display preferences.
+
+The reasosn I was not able to achieve these streth goals is because I encountered unexpected issues with the basic dispaly and operatability with my code, which forced me to start again and with time constraints in mindm that is the reasons why I did not persue these additional stretch goals.
